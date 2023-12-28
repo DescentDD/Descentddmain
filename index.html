@@ -2,6 +2,10 @@
 <html>
 
 <head>
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+  />
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -80,7 +84,7 @@
                                         <a href="/" class="blog-button">首页</a>
                                     </li>
                                     <li class="navigation__item">
-                                        <a href="https://blog.descentdd.top" class="blog-button" target="_blank">博客（一定抽空更新！才不要在没意义的地方内耗！）</a>
+                                        <a href="https://blog.descentdd.top" class="blog-button" target="_blank">博客</a>
                                     </li>
                                     <li class="navigation__item">
                                         <a href="https://apps.descentdd.top" class="blog-button" target="_blank">瞎整的网页应用</a>
@@ -118,6 +122,14 @@
 
     </header>
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
 
+    init({
+      el: '#waline',
+      serverURL: 'https://comments.descentdd.top',
+    });
+  </script>
 </body>
 </html>
